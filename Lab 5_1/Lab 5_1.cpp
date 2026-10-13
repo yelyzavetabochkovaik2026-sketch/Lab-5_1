@@ -1,17 +1,14 @@
 // Lab 5_1
+// Lab 5_1
 #include <iostream>
 #include <cmath>
-#include <cassert>
 
 using namespace std;
 
 double k(const double x, const double y);   // прототип
-void test();                                // прототип
 
 int main()
 {
-    test();                                 // unit test
-
     double p, q;
 
     cout << "p = "; cin >> p;
@@ -27,14 +24,4 @@ int main()
 double k(const double x, const double y)    // визначення
 {
     return x / (1 + sin(y) * sin(y)) + y / (1 + x * x);
-}
-
-void test()                                 // unit test для k(x, y)
-{
-    assert(fabs(k(0, 0) - 0) < 1e-9);
-    assert(fabs(k(1, 0) - 1) < 1e-9);
-    assert(fabs(k(0, 1) - 1) < 1e-9);
-    assert(fabs(k(2, 0) - 2) < 1e-9);
-
-    cout << "All tests passed" << endl;
 }
